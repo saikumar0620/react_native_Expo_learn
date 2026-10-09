@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+
+const myImage = require('./assets/profile.jpg');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>start your first app from here !</Text>
+      <Image source={myImage} style={{ width: 300, height: 400 }} />
+      {/* <StatusBar style="auto" /> */}
     </View>
   );
 }
