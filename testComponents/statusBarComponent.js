@@ -6,7 +6,7 @@ export default function statusBarComponent() {
   const [statusBarColor, setStatusBarColor] = useState('dark');
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="blue" barStyle={statusBarColor === 'dark' ? 'dark-content' : 'light-content'} />
+      <StatusBar backgroundColor="blue" barStyle={statusBarColor === 'dark' ? 'dark-content' : 'light-content'} hidden={false} />
       <Text>statusBarComponent</Text>
       <Button style={styles.button} title="Change StatusBar Color" onPress={() => setStatusBarColor(statusBarColor === 'dark' ? 'light' : 'dark')} />
     </View>
