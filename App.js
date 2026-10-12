@@ -1,17 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {  Modal, StyleSheet, Text, View,Button} from 'react-native';
+import {useState} from 'react';
+
 
 const myImage = require('./assets/profile.jpg');
 // const fav = require('./assets/favicon.png');
 const fav = require('./assets/favicon.png');
 
 export default function App() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={styles.container}>
       <Text>start your first app from here !</Text>
-      {/* <Image source={myImage} style={{ width: 300, height: 400 }} /> */}
-      <Image source={fav} style={{ width: 100, height: 100 }} />
-
+      <Button title="Open Modal" onPress={() => setModalVisible(true)}>
+      </Button>
+      <Modal
+        animationType="slide"
+        presentationStyle="pageSheet"
+        transparent={false}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={{marginTop: 22, backgroundColor:'mistyrose',flex:1,alignItems:'center',justifyContent:'center'}}> 
+          <Text> modal text</Text>
+          <Button title="Close Modal" onPress={() => setModalVisible(!modalVisible)}>
+          </Button>
+        </View>
+      </Modal>
       {/* <StatusBar style="auto" /> */}
     </View>
   );
