@@ -17,16 +17,19 @@ export default function App() {
       </Button>
       <Modal
         animationType="slide"
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}  
         presentationStyle="pageSheet"
         transparent={false}
         visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
+        // onRequestClose={() => {
+        //   setModalVisible(false);
+        // }}
       >
         <View style={{marginTop: 22, backgroundColor:'mistyrose',flex:1,alignItems:'center',justifyContent:'center'}}> 
           <Text> modal text</Text>
-          <Button title="Close Modal" onPress={() => setModalVisible(!modalVisible)}>
+          <Button title="Close Modal" onPress={() => setModalVisible(false)}>
           </Button>
         </View>
       </Modal>
