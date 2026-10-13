@@ -10,8 +10,13 @@ import ActivityIndicator from "./testComponents/ActivityIndicator";
 export default function App() {
   // return <ModalComponent />;
   // return <AlertComponent />;
-  return <StatusBarComponent />;
+  // return <StatusBarComponent />;
   // return <ActivityIndicator />;
+  return (
+    <View style={styles.container}>
+      <Text>styling inheritence</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -20,5 +25,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    color: "red",
   },
 });
