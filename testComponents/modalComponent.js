@@ -7,7 +7,7 @@ import {useState} from 'react';
 // const fav = require('./assets/favicon.png');
 // const fav = require('./assets/favicon.png');
 
-export default function modalComponent() {
+export default function ModalComponent() {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (

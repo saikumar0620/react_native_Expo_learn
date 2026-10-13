@@ -1,8 +1,8 @@
-import { View, Text,ActivityIndicator, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import React from 'react'
 import {useState} from 'react';
 
-export default function activityIndicator() {
+export default function ActivityIndicator() {
   const [loading, setLoading] = useState(true);
   return (
     <View style={styles.container}>

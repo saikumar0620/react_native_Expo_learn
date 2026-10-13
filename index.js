@@ -1,9 +1,9 @@
-import { registerRootComponent } from 'expo';
-import App from './App';
-import StatusBar from './testComponents/statusBarComponent'; 
-import activityIndicator from './testComponents/activityIndicator';
-import modalComponent from './testComponents/modalComponent';
-import alertComponent from './testComponents/alertComponent';
+import { registerRootComponent } from "expo";
+import App from "./App";
+import StatusBar from "./testComponents/StatusBarComponent";
+import activityIndicator from "./testComponents/ActivityIndicator";
+import modalComponent from "./testComponents/ModalComponent";
+import alertComponent from "./testComponents/AlertComponent";
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
@@ -11,5 +11,5 @@ import alertComponent from './testComponents/alertComponent';
 // registerRootComponent(modalComponent);
 // registerRootComponent(StatusBar);
 // registerRootComponent(activityIndicator);
-registerRootComponent(alertComponent);
-// registerRootComponent(App);
+// registerRootComponent(alertComponent);
+registerRootComponent(App);
