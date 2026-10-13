@@ -14,7 +14,7 @@ export default function App() {
   // return <ActivityIndicator />;
   return (
     <View style={styles.container}>
-      <Text>styling inheritence</Text>
+      <Text style={ { color: "red",}}>styling inheritence</Text>
     </View>
   )
 }
@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    color: "red",
+   
   },
 });
