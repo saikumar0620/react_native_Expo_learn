@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet, SafeAreaViewBase } from 'react-native'
+import { View, Text, StyleSheet, Platform } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { SafeAreaView } from 'react-native-safe-area-context' 
-import React from 'react'
+import CustomButton from './testComponents/CustomButton/CustomButton'
 
 
 export default function App() {
@@ -9,7 +9,9 @@ export default function App() {
    <SafeAreaView style={styles.safeContainer}>  
       <View style={styles.container}>
         <Text style={styles.text}>App</Text>
-      </View>
+     
+        {/* <CustomButton onPress={() => alert('Button Pressed')} title="Click Me" /> */}
+         </View>
       </SafeAreaView>
     
   )
@@ -17,18 +19,28 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
+  safeContainer: {
+    flex: 1,
+    backgroundColor: '##fff',
+  },
   container: {
-    // flex: 1,
+    flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  safeContainer: {
-    // flex: 1,
-    backgroundColor: '#fff',
-  },
   text: {
-    color: 'red',
-    fontSize: 20,
+    ...Platform.select({
+      ios: {
+        fontSize: 30,
+        // color: 'blue',
+      },
+      android: {
+        fontSize: 25,
+        // color: 'green',
+      },
+    }),
+    
   }
 })
