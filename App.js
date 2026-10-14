@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Modal, StyleSheet, Text, View, Button } from "react-native";
+import { Modal, StyleSheet, Text, View, Button, Dimensions } from "react-native";
 import ModalComponent from "./testComponents/ModalComponent";
 import AlertComponent from "./testComponents/AlertComponent";
 import StatusBarComponent from "./testComponents/StatusBarComponent";
@@ -9,18 +9,20 @@ import ActivityIndicator from "./testComponents/ActivityIndicator";
 
 export default function App() {
   // return <ModalComponent />;
-  return <AlertComponent />;
+  // return <AlertComponent />;
   // return <StatusBarComponent />;
   // return <ActivityIndicator />;
-  // return (
-  //   <View style={styles.container}>
-  //     <View style={styles.box}>
-  //     <Text style={styles.text}>dynamic dimensions intractions with UI</Text>
+  return (
+    <View style={styles.container}>
+      <View style={styles.box}>
+      <Text style={styles.text}>dynamic dimensions intractions with UI</Text>
 
-  //     </View>
-  //   </View>
-  // )
+      </View>
+    </View>
+  )
 }
+const windowWidth = Dimensions .get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {
@@ -37,8 +39,8 @@ const styles = StyleSheet.create({
 
     alignItems: "center",
     justifyContent: "center",
-    width: "100",
-    height: "100",
+    width: windowWidth > 400 ? 400 : windowWidth - 20,
+    height: windowHeight > 400 ? 400 : windowHeight - 20,
     border: "1px solid red",
     backgroundColor: "lightblue",
     borderRadius: 10,
