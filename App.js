@@ -33,7 +33,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "red",
-    padding: 20,
+    padding: windowHeight > 400 ? 20 : 10,
+    fontSize: windowWidth > 400 ? 20 : 10,
+    textAlign: "center",
   },
   box: {
 
