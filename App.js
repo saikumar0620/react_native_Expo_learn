@@ -9,17 +9,17 @@ import ActivityIndicator from "./testComponents/ActivityIndicator";
 
 export default function App() {
   // return <ModalComponent />;
-  // return <AlertComponent />;
+  return <AlertComponent />;
   // return <StatusBarComponent />;
   // return <ActivityIndicator />;
-  return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-      <Text style={styles.text}>dynamic dimensions intractions with UI</Text>
+  // return (
+  //   <View style={styles.container}>
+  //     <View style={styles.box}>
+  //     <Text style={styles.text}>dynamic dimensions intractions with UI</Text>
 
-      </View>
-    </View>
-  )
+  //     </View>
+  //   </View>
+  // )
 }
 
 const styles = StyleSheet.create({
